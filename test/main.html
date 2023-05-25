@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Suggest Diet</title>
+</head>
+<body>
+	<form action="suggest_diet.php" method="post">
+		<label for="age">Age:</label>
+		<input type="number" name="age" ><br><br>
+		
+		<label for="gender">Gender:</label>
+		<input type="radio" name="gender" value="male" > Male
+		<input type="radio" name="gender" value="female"> Female
+		<input type="radio" name="gender" value="other"> Other<br><br>
+		
+		<label for="weight">Weight (in kg):</label>
+		<input type="number" name="weight" ><br><br>
+		
+		<label for="height">Height (in cm):</label>
+		<input type="number" name="height" ><br><br>
+		
+		<label for="duration">Duration of diabetes (in years):</label>
+		<input type="number" name="duration" ><br><br>
+		
+		<label for="medication">Medication:</label>
+		<input type="radio" name="medication" value="yes" > Yes
+		<input type="radio" name="medication" value="no"> No<br><br>
+		
+		<label for="healthConditions">Other health conditions:</label>
+		<textarea name="healthConditions" rows="4" cols="50"></textarea><br><br>
+		
+		<label for="currentDiet">Current diet:</label>
+		<textarea name="currentDiet" rows="4" cols="50"></textarea><br><br>
+		
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
