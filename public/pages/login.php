@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (isset($_SESSION['email'])) {
+    header('Location: ' . "http://localhost/Main_Project/public/pages/main.php");
+    die();
+}
 include './../includes/navbar.php';
 ?>
 
@@ -11,9 +16,7 @@ include './../includes/navbar.php';
                 <form action='./../../server/check_user.php' method='POST'>
                     <div>
                         <div class='text-sm font-bold text-gray-700 tracking-wide'>Email Address</div>
-                        <input
-                            class='w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500'
-                            name='email' type='' placeholder='mike@gmail.com'>
+                        <input class='w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500' name='email' type='' placeholder='mike@gmail.com'>
                     </div>
                     <div class='mt-8'>
                         <div class='flex justify-between items-center'>
@@ -27,9 +30,7 @@ include './../includes/navbar.php';
                                 </a>
                             </div>
                         </div>
-                        <input
-                            class='w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500'
-                            type='password' placeholder='Enter your password'>
+                        <input class='w-full text-lg py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500' type='password' placeholder='Enter your password'>
                     </div>
                     <div class='mt-10'>
                         <button class="bg-indigo-500 text-gray-100 p-4 w-full rounded-full tracking-wide
@@ -40,8 +41,7 @@ include './../includes/navbar.php';
                     </div>
                 </form>
                 <div class='mt-12 text-sm font-display font-semibold text-gray-700 text-center'>
-                    Don't have an account ? <a href="./signup.php"
-                        class="cursor-pointer text-indigo-600 hover:text-indigo-800">Sign up</a>
+                    Don't have an account ? <a href="./signup.php" class="cursor-pointer text-indigo-600 hover:text-indigo-800">Sign up</a>
                 </div>
             </div>
         </div>
@@ -52,5 +52,5 @@ include './../includes/navbar.php';
 </div>
 
 <?php
-	 include "./../includes/footer.php";
+include "./../includes/footer.php";
 ?>
