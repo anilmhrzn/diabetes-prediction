@@ -13,15 +13,15 @@ include "./../includes/navbar.php";
         
         <div class="w-full lg:w-6/12">
             <img class="lg:block hidden w-full" src="
-            https://www.spinecorrectioncenter.com/wp-content/uploads/2019/09/9-Benefits-of-Eating-a-Balanced-Diet_resized.png
+            ./../../images/first.jpeg
             " alt="people discussing on board"
              
             />
             <img class="lg:hidden sm:block hidden w-full" src="
-            https://www.spinecorrectioncenter.com/wp-content/uploads/2019/09/9-Benefits-of-Eating-a-Balanced-Diet_resized.png
+            ./../../images/first.jpeg
             " alt="people discussing on board" />
             <img class="sm:hidden block w-full" src="
-            https://www.spinecorrectioncenter.com/wp-content/uploads/2019/09/9-Benefits-of-Eating-a-Balanced-Diet_resized.png
+            ./../../images/first.jpeg
             " alt="people discussing on board" />
         </div>
     </div>
@@ -67,16 +67,14 @@ include "./../includes/navbar.php";
 
     <div class="flex lg:flex-row flex-col md:gap-14 gap-16 justify-between lg:mt-20 mt-16">
     <div class="w-full lg:w-6/12">
-            <img class="lg:block hidden w-full" src="
-            https://hips.hearstapps.com/hmg-prod/images/heart-healthy-food-1580231690.jpg?crop=1.00xw:0.752xh;0,0.192xh&resize=1200:*
-            " alt="people discussing on board"
+            <img class="lg:block hidden w-full" src="./../../images/first.jpeg" alt="people discussing on board"
              
             />
             <img class="lg:hidden sm:block hidden w-full" src="
-            https://hips.hearstapps.com/hmg-prod/images/heart-healthy-food-1580231690.jpg?crop=1.00xw:0.752xh;0,0.192xh&resize=1200:*
+            ./../../images/first.jpeg
             " alt="people discussing on board" />
             <img class="sm:hidden block w-full" src="
-            https://hips.hearstapps.com/hmg-prod/images/heart-healthy-food-1580231690.jpg?crop=1.00xw:0.752xh;0,0.192xh&resize=1200:*
+            ./../../images/first.jpeg
             " alt="people discussing on board" />
         </div>    
         <!-- https://hips.hearstapps.com/hmg-prod/images/heart-healthy-food-1580231690.jpg?crop=1.00xw:0.752xh;0,0.192xh&resize=1200:* -->

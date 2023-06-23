@@ -14,7 +14,7 @@
     <div class="container px-6 py-10 mx-auto">
         <div class="lg:-mx-6 lg:flex lg:items-center">
             <img class="object-cover object-center lg:w-1/2 lg:mx-6 w-full h-96 rounded-lg lg:h-[36rem]"
-                src="https://images.unsplash.com/photo-1499470932971-a90681ce8530?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                src="./../../images/first.jpeg"
                 alt="">
 
             <div class="mt-8 mx-4 lg:w-1/2 lg:px-6 lg:mt-0">
@@ -30,8 +30,8 @@
                     aperiam dolorum, obcaecati corrupti aspernatur a. ”
                 </p>
 
-                <h3 class="mt-6 text-lg font-medium text-blue-500">Mia Brown</h3>
-                <p class="text-gray-600 dark:text-gray-300">Marketing Manager at Stech</p>
+                <h3 class="mt-6 text-lg font-medium text-blue-500">Anil Maharjana</h3>
+                <p class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nisi consectetur, voluptatem ratione excepturi, nesciunt sit repellendus eaque culpa a suscipit magni ex adipisci fuga unde vel ea. Accusantium, eligendi?</p>
 
                 <div class="flex items-center justify-between mt-12 lg:justify-start">
                     <button title="left arrow"

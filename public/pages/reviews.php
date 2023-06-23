@@ -18,10 +18,10 @@
                 <div class="h-28 overflow-hidden rounded-t-lg bg-[#9d789b]"></div>
                 <div
                     class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
-                    <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp" />
+                    <img src="./../../images/gyan.jpg" />
                 </div>
                 <div class="p-6">
-                    <h4 class="mb-4 text-2xl font-semibold">Maria Smantha</h4>
+                    <h4 class="mb-4 text-2xl font-semibold">Gyan 1</h4>
                     <hr />
                     <p class="mt-4">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block h-7 w-7 pr-2"
@@ -42,10 +42,10 @@
                 <div class="h-28 overflow-hidden rounded-t-lg bg-[#7a81a8]"></div>
                 <div
                     class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
-                    <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp" />
+                    <img src="./../../images/gyan.jpg " />
                 </div>
                 <div class="p-6">
-                    <h4 class="mb-4 text-2xl font-semibold">Lisa Cudrow</h4>
+                    <h4 class="mb-4 text-2xl font-semibold">Gyan 2</h4>
                     <hr />
                     <p class="mt-4">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block h-7 w-7 pr-2"
@@ -66,10 +66,10 @@
                 <div class="h-28 overflow-hidden rounded-t-lg bg-[#6d5b98]"></div>
                 <div
                     class="mx-auto -mt-12 w-24 overflow-hidden rounded-full border-2 border-white bg-white dark:border-neutral-800 dark:bg-neutral-800">
-                    <img src="https://tecdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp" />
+                    <img src="./../../images/gyan.jpg" />
                 </div>
                 <div class="p-6">
-                    <h4 class="mb-4 text-2xl font-semibold">John Smith</h4>
+                    <h4 class="mb-4 text-2xl font-semibold">Gyan 3</h4>
                     <hr />
                     <p class="mt-4">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block h-7 w-7 pr-2"

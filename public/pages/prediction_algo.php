@@ -152,6 +152,7 @@ $input = array_fill(0, count($fields), null);
 // if the form was submitted, process the input and make a prediction
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // validate input and populate input array
+    // echo $field[];
     $errors = array();
     foreach ($fields as $i => $field) {
         if ($field['label'] === 'DiabetesPedigreeFunction') {
@@ -168,18 +169,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // if there are no validation errors, make a prediction
     if (empty($errors)) {
         // predicting 100 times and giveing output which comes maxium no of times
-        $predictions = array();
-        for ($times = 0; $times < 100; $times++) {
+        // $predictions = array();
+        // for ($times = 0; $times < 100; $times++) {
             $prediction = predict($class_probabilities, $attribute_probabilities, $input);
-            $predictions[] = $prediction;
-        }
+            echo $prediction;
+            // ;
+            // $predictions[] = $prediction;
+        // }
 
         // Count the occurrences of each prediction value
-        $occurrences = array_count_values($predictions);
+        // $occurrences = array_count_values($predictions);
 
-        // Find the prediction value with the maximum occurrences
-        $maxValue = max($occurrences);
-        $maxPrediction = array_search($maxValue, $occurrences);
+        // // Find the prediction value with the maximum occurrences
+        // $maxValue = max($occurrences);
+        // $maxPrediction = array_search($maxValue, $occurrences);
 ?>
 
 <!-- this is for modal -->
@@ -199,7 +202,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         class="text-3xl dark:text-white lg:text-4xl font-semibold leading-7 lg:leading-9 text-center text-gray-800">
                         <!-- We use cookies -->
                         <?php
-            if($maxPrediction==1){
+            if($prediction==1){
                 echo "Oh no!";
             }else{
                 echo "Great!";
@@ -211,7 +214,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <p class="mt-6 sm:w-80 text-base dark:text-white leading-7 text-center text-gray-800">
                         <!-- Please, accept these sweeties to continue enjoying our site! -->
                         <?php
-            if($maxPrediction==1){
+            if($prediction==1){
                 echo "According to the information you have given you have diabetes";
             }else{
                 // echo "Great!";
@@ -223,7 +226,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                 <!-- Mmm... Sweet! -->
                 <?php
-            if($maxPrediction==1){?>
+            if($prediction==1){?>
                 <a href="http://localhost/Main_Project/public/pages/my_diet.php"
                     class="w-full dark:text-gray-800 dark:hover:bg-gray-100 dark:bg-white sm:w-auto mt-14 text-base leading-4 text-center text-white py-6 px-16 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 bg-gray-800 hover:bg-black">
                     <?="What should i do?"?>
@@ -244,7 +247,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <p
                     class="mt-6 dark:text-white dark:hover:border-white text-base leading-none focus:outline-none hover:border-gray-800 focus:border-gray-800 border-b border-transparent text-center text-gray-800">
                     <?php
-            if($maxPrediction==1){
+            if($prediction==1){
                 echo "Kindly consider following our carefully crafted diet plan for optimal results.";
             }else{
                 echo "But be careful no one is immune to diabetes,a gentle reminder of the lurking possibility of diabetes.";
@@ -271,17 +274,7 @@ const showMenu = (flag) => {
     menu.classList.toggle("hidden");
 };
 </script>
-<script>
-alert('helll');
-</script>
-
-
-
-
 <?php
-        // echo "prediction: $maxPrediction";
-        // $prediction = predict($class_probabilities, $attribute_probabilities, $input);
-        // echo "Prediction: " . $prediction;
     } else {
         echo "<ul>";
         foreach ($errors as $error) {

@@ -14,7 +14,7 @@ $password = password_hash($_POST["password"], PASSWORD_DEFAULT); // Hash passwor
 
 // Execute statement
 if ($stmt->execute() === TRUE) {
-  header("Location: http://localhost/Main_Project/public/login.php");
+  header("Location:http://localhost/Main_Project/public/pages/login.php");
 }else {
   echo "Error: " . $stmt->error;
 }

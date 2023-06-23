@@ -73,7 +73,7 @@
     <a
       class="text-neutral-800 dark:text-neutral-400"
       href="https://tailwind-elements.com/"
-      >Tailwind Elements</a
+      >Anil Maharjan</a
     >
   </div>
 </footer>
