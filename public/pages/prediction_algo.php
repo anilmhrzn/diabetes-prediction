@@ -33,7 +33,7 @@ function str_to_float($dataset)
 function split_dataset($dataset, $split_ratio)
 {
     $split = (int) (count($dataset) * $split_ratio);
-    shuffle($dataset);
+    // shuffle($dataset);
     $training_set = array_slice($dataset, 0, $split);
     $testing_set = array_slice($dataset, $split);
     return array($training_set, $testing_set);
@@ -45,18 +45,44 @@ list($training_set, $testing_set) = split_dataset($dataset, 0.7);
 
 
 // step 3
+// function separate_by_class($dataset)
+// {
+//     $separated = array();
+//     foreach ($dataset as $row) {
+//         $class = $row[count($row) - 1];
+//         if (!isset($separated[$class])) {
+//             $separated[$class] = array();
+//         }
+//         $separated[$class][] = $row;
+//     }
+//     return $separated;
+// }
+
+
 function separate_by_class($dataset)
 {
+    $counter=0;
     $separated = array();
     foreach ($dataset as $row) {
         $class = $row[count($row) - 1];
-        if (!isset($separated[$class])) {
-            $separated[$class] = array();
+        // $insulinValue = $row[4]; // Assuming insulin is at index 4
+        $bmiValue=$row[5];
+        
+        if ($bmiValue != 0 ) {
+            if (!isset($separated[$class])) {
+                $separated[$class] = array();
+            }
+            $separated[$class][] = $row;
+            // print_r($separated);
+        }else{
+            $counter++;
         }
-        $separated[$class][] = $row;
     }
+    echo "<br>this is counter ".$counter;
     return $separated;
 }
+
+
 
 function calculate_class_probabilities($dataset)
 {
