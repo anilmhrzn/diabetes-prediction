@@ -54,7 +54,7 @@
         </div>
     </div>
 </section>
-
+admin page should be made 
 
 <?php 
 include "./../includes/footer.php"
