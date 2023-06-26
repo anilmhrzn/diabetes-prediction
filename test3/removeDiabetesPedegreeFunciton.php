@@ -1,26 +1,31 @@
 <?php
-// Read the dataset from the CSV file
-$dataset = array_map('str_getcsv', file('pima-indians-diabetesdata.csv'));
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+// Path to the CSV file
+$csvFile = 'pima-indians-diabetesdata.csv';
 
-// Function to remove a specific column from the dataset
-function removeColumn(&$array, $columnIndex) {
-    foreach ($array as &$row) {
-        if (isset($row[$columnIndex])) {
-            array_splice($row, $columnIndex, 1);
-        }
+// Read the CSV file into an array
+$csvData = array_map('str_getcsv', file($csvFile));
+
+// Iterate over the rows and remove rows where the 4th column value is 0
+foreach ($csvData as $key => $row) {
+    // if ($key === 0) {
+    //     // Skip the header row
+    //     continue;
+    // }
+    
+    if ($row[4] == 0) {
+        // Remove the row from the CSV data
+        unset($csvData[$key]);
     }
 }
 
-// Remove the "Diabetes Pedigree Function" column (assuming it's at index 6)
-removeColumn($dataset, 6);
-
-// Save the modified dataset back to a new CSV file
-$modifiedCsv = '';
-foreach ($dataset as $row) {
-    $modifiedCsv .= implode(',', $row) . "\n";
+// Write the modified CSV data back to the file
+$fileHandle = fopen($csvFile, 'w');
+foreach ($csvData as $row) {
+    fputcsv($fileHandle, $row);
 }
+fclose($fileHandle);
 
-file_put_contents('modified-pima-indians-diabetesdata.csv', $modifiedCsv);
-
-echo "Column removed successfully and modified dataset saved as 'modified-pima-indians-diabetesdata.csv'.";
+echo 'Rows with 0 in the 4th column have been deleted from the CSV file.';
 ?>
