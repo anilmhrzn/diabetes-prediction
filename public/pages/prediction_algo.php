@@ -78,7 +78,7 @@ function separate_by_class($dataset)
             $counter++;
         }
     }
-    echo "<br>this is counter ".$counter;
+    // echo "<br>this is counter ".$counter;
     return $separated;
 }
 
