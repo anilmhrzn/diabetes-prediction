@@ -25,7 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       // Login successful, redirect to the home page
      
     $_SESSION['email'] =$row["email"] ;
-      header("Location: http://localhost/Main_Project/public/pages/main.php", true, 301);
+    $_SESSION['admin_status'] =$row["admin_status"] ;
+
+    header("Location: http://localhost/Main_Project/public/pages/main.php", true, 301);
       // TODO pass name here and say welcome to user 
       exit;
     }

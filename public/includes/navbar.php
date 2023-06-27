@@ -85,15 +85,26 @@ session_start();
                                     class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                                     id="reviews-link">Reviews</a>
                                 <?php
-                            if (isset($_SESSION['email'])) {?>
+                            if (isset($_SESSION['email']) && isset($_SESSION['admin_status'])) {
+                                if($_SESSION['admin_status']==0){?>
                                 <a href="./../pages/calorie_calculator.php"
                                     class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
-                                    id="calorie-calculator-link">Check for Diabetes</a>
+                                    id="calorie-calculator-link">Check for Diabetes</a><?php
+                                    ?>
                                 <a href="./../pages/my_diet.php"
                                     class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                                     id="my-diet-link">My Diet</a>
                                 <?php
-                                    }
+                                }else{
+                                    ?>
+                                    <a href="./../pages/suggest.php"
+                                    class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                                    id="my-diet-link">My Diet</a>
+                                    <?php
+                                    
+                                }
+                            
+                            }
                                     ?>
                             </div>
                         </div>
