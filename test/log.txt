@@ -1,0 +1,78 @@
+Array
+(
+    [image] => Array
+        (
+            [name] => USA.jpeg
+            [full_path] => USA.jpeg
+            [type] => image/jpeg
+            [tmp_name] => /tmp/phpMOjugo
+            [error] => 0
+            [size] => 7728
+        )
+
+)
+Array
+(
+    [image] => Array
+        (
+            [name] => USA.jpeg
+            [full_path] => USA.jpeg
+            [type] => image/jpeg
+            [tmp_name] => /tmp/phpj0cmtM
+            [error] => 0
+            [size] => 7728
+        )
+
+)
+Array
+(
+    [image] => Array
+        (
+            [name] => USA.jpeg
+            [full_path] => USA.jpeg
+            [type] => image/jpeg
+            [tmp_name] => /tmp/phpM7oJ5n
+            [error] => 0
+            [size] => 7728
+        )
+
+)
+Array
+(
+    [image] => Array
+        (
+            [name] => USA.jpeg
+            [full_path] => USA.jpeg
+            [type] => image/jpeg
+            [tmp_name] => /tmp/phpAohcPx
+            [error] => 0
+            [size] => 7728
+        )
+
+)
+Array
+(
+    [image] => Array
+        (
+            [name] => USA.jpeg
+            [full_path] => USA.jpeg
+            [type] => image/jpeg
+            [tmp_name] => /tmp/phpdvFViC
+            [error] => 0
+            [size] => 7728
+        )
+
+)
+Array
+(
+    [image] => Array
+        (
+            [name] => USA.jpeg
+            [full_path] => USA.jpeg
+            [type] => image/jpeg
+            [tmp_name] => /tmp/phpFRhsUn
+            [error] => 0
+            [size] => 7728
+        )
+
+)
