@@ -17,7 +17,7 @@ const currentUrl = window.location.href;
   // for desktop
   if (currentUrl.includes('main')) {
     dashboardLink.classList.add('bg-gray-900', 'text-white', 'font-medium');
-  } else if (currentUrl.includes('blogs')) {
+  } else if (currentUrl.includes('blogs') || currentUrl.includes('edit_blogs') ) {
     blogsLink.classList.add('bg-gray-900', 'text-white', 'font-medium');
   } else if (currentUrl.includes('about_us')) {
     aboutUsLink.classList.add('bg-gray-900', 'text-white', 'font-medium');

@@ -10,7 +10,6 @@
             totam voluptas nostrum quisquam eum porro a pariatur veniam.
         </p>
     </div>
-
     <!--First Testimonial-->
     <div class="grid gap-6 text-center md:grid-cols-3">
         <div>
@@ -23,7 +22,7 @@
                 <div class="p-6">
                     <h4 class="mb-4 text-2xl font-semibold">Gyan 1</h4>
                     <hr />
-                    <p class="mt-4">
+                    <p class="mt-4 bg-[#9d789b] p-4 rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block h-7 w-7 pr-2"
                             viewBox="0 0 24 24">
                             <path
@@ -47,7 +46,7 @@
                 <div class="p-6">
                     <h4 class="mb-4 text-2xl font-semibold">Gyan 2</h4>
                     <hr />
-                    <p class="mt-4">
+                    <p class="mt-4 p-4 bg-[#7a81a8] rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block h-7 w-7 pr-2"
                             viewBox="0 0 24 24">
                             <path
@@ -69,9 +68,9 @@
                     <img src="./../../images/gyan.jpg" />
                 </div>
                 <div class="p-6">
-                    <h4 class="mb-4 text-2xl font-semibold">Gyan 3</h4>
+                    <h4 class="mb-4 text-2xl font-semibold">Gyan 3 </h4>
                     <hr />
-                    <p class="mt-4">
+                    <p class="mt-4 p-4 bg-[#6d5b98] rounded-full">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block h-7 w-7 pr-2"
                             viewBox="0 0 24 24">
                             <path

@@ -16,8 +16,15 @@ session_start();
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./../css/output-style.css">
+    <link rel="stylesheet" href="http://localhost/Main_Project/public/css/output-style.css">
     <!-- <link rel="stylesheet" href="./../css/output-2style.css"> -->
     <script src="./../css/jquery.js"></script>
+    <!-- Include the Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <!-- Include the Flatpickr JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
 
 </head>
 
@@ -33,7 +40,7 @@ session_start();
                             class="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                             id="menu-toggle" aria-controls="mobile-menu" aria-expanded="false">
                             <span class="sr-only">Open main menu</span>
-                           
+
                             <!--
             Icon when menu is closed.
 
@@ -58,9 +65,10 @@ session_start();
                     <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                         <div class="flex flex-shrink-0 items-center">
                             <!-- <span  class="text-green-700">DiabFriend</span> -->
-                            <button style="font-family: 'Dancing Script', cursive;"  class="bg-orange-500  text-green-700 font-bold p-1 rounded text-2xl">
-                            DiabFriend
-</button>
+                            <button style="font-family: 'Dancing Script', cursive;"
+                                class="bg-orange-500  text-green-700 font-bold p-1 rounded text-2xl">
+                                DiabFriend
+                            </button>
                             <!-- <img class="block h-16 w-auto lg:hidden"
                                 src="./../../images/jzfpariq-removebg-preview.png"
                                 alt="Your Company">
@@ -97,10 +105,10 @@ session_start();
                                 <?php
                                 }else{
                                     ?>
-                                    <a href="./../pages/suggest.php"
+                                <a href="./../pages/suggest.php"
                                     class="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                                     id="my-diet-link">My Diet</a>
-                                    <?php
+                                <?php
                                     
                                 }
                             

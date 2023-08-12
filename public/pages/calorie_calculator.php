@@ -12,23 +12,23 @@ if (!(isset($_SESSION['email']))) {
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                    Number of pregnancies
+                    Number of pregnancies(usually 0 to 6)
                 </label>
                 <input
                     class="appearance-none block w-full bg-gray-200 text-gray-700 border   rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                     id="Pregnancies" name="0" oninput="validateInput(event)" onpaste="return false"
-                    onkeypress="return validateKeyPress(event)" type="number" placeholder="0">
+                    onkeypress="return validateKeyPress(event)" max="6" type="number" placeholder="0">
             </div>
         </div>
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                    Glucose
+                    Glucose (usually 80 - 140)
                 </label>
                 <input
                     class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                     id="Glucose" name="1" oninput="validateInput(event)" onpaste="return false"
-                    onkeypress="return validateKeyPress(event)" type="number" placeholder="0">
+                    onkeypress="return validateKeyPress(event)" min="80" max="140" type="number" placeholder="0">
             </div>
         </div>
         <div class="flex flex-wrap -mx-3 mb-6">
@@ -42,31 +42,31 @@ if (!(isset($_SESSION['email']))) {
                 <input
                     class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                     id="BloodPressure" name="2" oninput="validateInput(event)" onpaste="return false"
-                    onkeypress="return validateKeyPress(event)" type="number" placeholder="0">
+                    onkeypress="return validateKeyPress(event)" type="number" min="50" max="90" placeholder="0">
 
             </div>
         </div>
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                    Skinthickness-Triceps skinfold thickness (mm)
+                    Skinthickness-Triceps skinfold thickness (mm) (usually between 10 to 60)
                 </label>
                 <input
                     class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                     id="SkinThickness" name="3" oninput="validateInput(event)" onpaste="return false"
-                    onkeypress="return validateKeyPress(event)" type="number" placeholder="0">
+                    onkeypress="return validateKeyPress(event)" min="10" type="number" placeholder="0">
 
             </div>
         </div>
         <div class="flex flex-wrap -mx-3 mb-6">
             <div class="w-full px-3">
                 <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                    Insulin
+                    Insulin (usually between 17 to 250)
                 </label>
                 <input
                     class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                     id="Insulin" name="4" oninput="validateInput(event)" onpaste="return false"
-                    onkeypress="return validateKeyPress(event)" type="number" placeholder="0">
+                    onkeypress="return validateKeyPress(event)" min="17" max="250" type="number" placeholder="0">
 
             </div>
         </div>
@@ -133,7 +133,7 @@ if (!(isset($_SESSION['email']))) {
                 <input
                     class="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
                     id="Age" name="6" oninput="validateInput(event)" onpaste="return false"
-                    onkeypress="return validateKeyPress(event)" type="number" placeholder="0">
+                    onkeypress="return validateKeyPress(event)" type="number" min="1" max="120" placeholder="0">
 
             </div>
         </div>

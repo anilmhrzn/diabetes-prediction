@@ -1,7 +1,9 @@
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-include "./../includes/navbar.php";
+include "./../includes/navbar.php";?>
+
+<?php
 include_once "./../../server/connection.php";
 
 if (isset($_SESSION['email']) && isset($_SESSION['admin_status']) && $_SESSION['admin_status']==1) {
@@ -20,7 +22,7 @@ $posts_per_page = 4;
 $offset = ($page - 1) * $posts_per_page;
 
 // Get the total number of rows in the "blogs" table
-$sql = "SELECT COUNT(*) AS count FROM blogs";
+$sql = "SELECT COUNT(*) AS count FROM blogs where state=1";
 $result = mysqli_query($conn, $sql);
 $count = mysqli_fetch_assoc($result)['count'];
 
@@ -28,7 +30,7 @@ $count = mysqli_fetch_assoc($result)['count'];
 $total_pages = ceil($count / $posts_per_page);
 
 // Select a subset of rows from the "blogs" table
-$sql = "SELECT * FROM blogs ORDER BY added_date DESC LIMIT $offset, $posts_per_page";
+$sql = "SELECT * FROM blogs where state=1 ORDER BY added_date DESC LIMIT $offset, $posts_per_page ";
 $result = mysqli_query($conn, $sql);
 
 // Check if any rows were returned
