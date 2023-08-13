@@ -25,16 +25,12 @@ function calculate_confusion_matrix($actual, $predicted) {
     ];
 }
 
-
-
-
-// ... (your existing code)
 $testing_set=$testing_set;
 // if there are no validation errors, make a prediction
 if (empty($errors)) {
 
     $actualLabels = array_column($testing_set, count($fields) +1);
-    print_r($actualLabels);
+    // print_r($actualLabels);
     $predictedLabels = array();
     
     // Generate predictions for each instance in the testing set
@@ -66,7 +62,50 @@ if (empty($errors)) {
 // ... (rest of your code)
 
 ?>
-   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+function give_number_pregnencies(){
+  $dataset = load_dataset('./pima-indians-diabetesdata.csv');
+  $dataArray=array();
+  $dataArray[0]=[0,0];
+  $dataArray[1]=[1,0];
+  $dataArray[2]=[2,0];
+  $dataArray[3]=[3,0];
+  $dataArray[4]=[4,0];
+  $dataArray[5]=[5,0];
+  $dataArray[6]=[6,0];
+  $dataArray[7]=[7,0];
+  $dataArray[8]=[8,0];
+  $dataArray[9]=[9,0];
+  $dataArray[10]=[10,0];
+  foreach ($dataset as $row) {
+    echo $row[0]."<br>";
+    if($row[8]==1){
+      $tmp=$row[0];
+      $dataArray[$tmp][1]=$dataArray[$tmp][1]+1;
+      // echo 'hello';
+    }
+    
+  }
+  return $dataArray;
+
+  
+}
+
+
+$dataArray=json_encode(give_number_pregnencies());
+// $dataJSON = json_encode($dataArray);
+// ... (your existing code) -->
+   <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
       google.charts.load('current', {'packages':['bar']});
       google.charts.setOnLoadCallback(drawChart);
@@ -79,18 +118,26 @@ if (empty($errors)) {
         //   ['80', 660, 1120, 300, 200],
         //   ['100', 1030, 540, 350]
         // ]);
-        var data = google.visualization.arrayToDataTable([
-['pregnancies','no of diabetic people'],
-['0',2],
-['1',2],
-['2',2],
-['3',2],
-['4',1],
-['5',1],
-['7',1],
-['8',1],
-        ]);
-
+        var data = google.visualization.arrayToDataTable(
+          
+//           [
+// ['pregnancies','no of diabetic people'],
+// ['0',2],
+// ['1',2],
+// ['2',2],
+// ['3',2],
+// ['4',1],
+// ['5',1],
+// ['7',1],
+// ['8',1],
+//         ]
+        );
+        var data = new google.visualization.DataTable();
+data.addColumn('string', 'pregnancies');
+data.addColumn('number', 'no of diabetic people');
+data.addRows(<?=$dataArray?>);
+console.log(<?=$dataArray?>);
+console.log('jeje');
         var options = {
           chart: {
             title: 'Company Performance',
@@ -104,4 +151,4 @@ if (empty($errors)) {
         chart.draw(data, google.charts.Bar.convertOptions(options));
       }
     </script>
-    <div id="barchart_material" style="width: 900px; height: 500px;"></div>
+    <div id="barchart_material" style="width: 900px; height: 500px;"></div> -->

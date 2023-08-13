@@ -13,6 +13,7 @@ function load_dataset($filename)
         }
         fclose($handle);
     }
+    // print_r($dataset);
     return $dataset;
 }
 
@@ -67,6 +68,13 @@ function separate_by_class($dataset)
         $class = $row[count($row) - 1];
         // $insulinValue = $row[4]; // Assuming insulin is at index 4
         $bmiValue=$row[5];
+        // echo $row[0]."<br>";
+        // echo $row[1]."<br>";
+        // echo $row[2]."<br>";
+        // echo $row[3]."<br>";
+        // echo $row[4]."<br>";
+        // echo $row[5]."<br>";
+        // echo $row[6]."<br>";
         
         if ($bmiValue != 0 ) {
             if (!isset($separated[$class])) {
@@ -79,7 +87,9 @@ function separate_by_class($dataset)
         }
     }
     // echo "<br>this is counter ".$counter;
+    // echo "<hr>separated by class <hr> ". print_r($separated);
     return $separated;
+
 }
 
 
@@ -92,7 +102,10 @@ function calculate_class_probabilities($dataset)
     foreach ($separated as $class => $rows) {
         $class_probabilities[$class] = count($rows) / $total_rows;
     }
+    // echo "<hr>class  probabilites<hr> ". print_r($dataset);
+    // echo count($dataset);
     return $class_probabilities;
+
 }
 
 function calculate_mean($numbers)
@@ -124,7 +137,12 @@ function calculate_attribute_probabilities($dataset)
             $attribute_probabilities[$class][] = array('mean' => $mean, 'stdev' => $stdev);
         }
     }
+    // echo "<hr>attribute  probabilites<hr> ";
+    // print "<pre>";
+    // print_r($attribute_probabilities);
+    // print "</pre>";
     return $attribute_probabilities;
+
 }
 
 $class_probabilities = calculate_class_probabilities($training_set);
@@ -244,7 +262,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 echo "According to the information you have given you have diabetes";
             }else{
                 // echo "Great!";
-                echo "According to the information you have given you don't have diabetes";
+           echo "According to the information you have given you don't have diabetes";
 
             }
             ?>
